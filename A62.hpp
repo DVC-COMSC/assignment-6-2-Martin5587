@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+// complete two functions
 double nthpowerp(int n)
 {
         // return n_th power number
