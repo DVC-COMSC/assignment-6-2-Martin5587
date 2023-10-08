@@ -1,18 +1,20 @@
 //
-#include "A62.hpp"
+#include "main.hpp"
 
 int main()
 {
-        int n;
-        double result;
-        cout << "Enter your input\n";
-        cin >> n;
+        int rdnum1, rdnum2, rdnum3;
+        int result;
 
-        if (n > 0)
-                result = nthpowerp(n);
-        else if (n < 0)
-                result = nthpowern(n);
-        else
-                result = 1;
-        printout(result);
+        srand(time(0));
+
+        rdnum1 = getRandom();
+        rdnum2 = getRandom();
+        rdnum3 = getRandom();
+
+        cout << "Random values " << rdnum1 << "\t" << rdnum2 << "\t" << rdnum3 << endl;
+        cout << " Mean Value is " << (rdnum1 + rdnum2 + rdnum3) / 3.0 << endl;
+
+        result = getClosestMed(rdnum1, rdnum2, rdnum3);
+        cout << "The closest value to mean is " << result << endl;
 }
